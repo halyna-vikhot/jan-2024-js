@@ -25,12 +25,19 @@ console.log(n6)
 let n7= 16;
 console.log(n7)
 
-console.log(!!'lesson 1')
-console.log(!!0)
+console.log(!!'lesson 1');
+console.log(!!0);
 
 //
 // - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person (Не об'єкт, просто за допомоги конкатенації)
 //
+let firstName='Halyna';
+let middleName='Vikhot';
+let lastName='Mykolaivna';
+
+let person=`${firstName} ${middleName} ${lastName}`;
+console.log(person)
+
 // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
 //     let a = 100; let b = '100'; let c = true;
 //
