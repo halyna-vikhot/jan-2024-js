@@ -1,12 +1,51 @@
 // Масиви та об'єкти:
 // - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
 
+let arr;
+arr=[123, 555, 777, 789,true, false, 244, 355, 999, 12345];
+console.log(arr)
 
-
-
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+console.log(arr[3]);
+console.log(arr[4]);
+console.log(arr[5]);
+console.log(arr[6]);
+console.log(arr[7]);
+console.log(arr[8]);
+console.log(arr[9]);
 
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
-// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
+
+let book1={}
+console.log(book1);
+book1.title = 'Kobzar';
+book1.pageCount = 115;
+book1.genre ='poetry';
+
+let book2={}
+console.log(book2);
+book2.title = 'Lisova pisnya';
+book2.pageCount = 630;
+book2.genre = 'poetry';
+
+let book3={}
+console.log(book3);
+book3.title = 'Three hundred poetry';
+book3.pageCount= 150;
+book3.genre='poetry';
+
+
+// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом.
+// Кожен автор має поля name та age.
+
+let volume1={}
+console.log(volume1)
+volume1.title=['Essentialism']
+volume1.pageCount=270
+// volume1.genre['psychology']
+// volume1.authors['Greg Makkeon']
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 //
 //
