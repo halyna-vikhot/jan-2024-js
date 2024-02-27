@@ -92,6 +92,7 @@ console.log(users[9].password);
 // Логічні розгалуження:
 //     - Є змінна х, якій ви надаєте довільне числове значення.
 //     Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
+
 let x = 5;
 if (x!==0){
     console.log(true);
@@ -104,38 +105,85 @@ if (x!==0){
 // - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години
 // попадає число
 // (в першу, другу, третю или четверту частину години).
-let time=+prompt('add number');
-if (time >=0 && time <=15){
-    console.log ('first part');
-}
-else if (time >=16 && time <=31){
-    console.log('second part');
-}
-else if (time >=32 && time <=45){
-    console.log('third part');
-}
-else if (time >=46 && time <=59){
-    console.log('fourth part');
+{
+    let time = +prompt('enter number');
+    if (time >= 0 && time <= 15) {
+        console.log('first part');
+    } else if (time >= 16 && time <= 31) {
+        console.log('second part');
+    } else if (time >= 32 && time <= 45) {
+        console.log('third part');
+    } else if (time >= 46 && time <= 59) {
+        console.log('fourth part');
+    }
 }
 
 // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число
 // (у першу, другу чи третю).
-let day = +prompt('enter number');
-if (day >= 1 && day <= 10) {
-    console.log('first part of month');
-}
-if (day >= 11 && day <= 20) {
-    console.log('second part of month');
-}
-if (day >= 21 && day <= 31) {
-    console.log('third part of month');
+{
+    let day = +prompt('enter number');
+    if (day >= 1 && day <= 10) {
+        console.log('first part of month');
+    }
+    if (day >= 11 && day <= 20) {
+        console.log('second part of month');
+    }
+    if (day >= 21 && day <= 31) {
+        console.log('third part of month');
+    }
 }
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається
 // інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
 
+let day = prompt('enter day');
+
+switch (day){
+    case 'first day':
+        console.log('monday');
+        break;
+    case 'second day':
+        console.log('tuesday');
+        break;
+    case 'third day':
+        console.log('wednesday');
+        break;
+    case 'fourth day':
+        console.log('thursday');
+        break;
+    case 'fifth day':
+        console.log('friday');
+        break;
+    case 'sixth day':
+        console.log('saturday');
+        break;
+    case 'seventh day':
+        console.log('sunday');
+        break;
+
+}
+
 //     - Користувач вводить або має два числа.
 //         Потрібно знайти та вивести максимальне число з тих двох .
 //         Також потрібно врахувати коли введені рівні числа.
+let number1=+prompt('enter number1');
+let number2=+prompt('enter number two');
+if (number1>number2){
+    console.log(number1);
+}
+if (number1<number2){
+    console.log(number2);
+}
+else {
+
+}
+
+
+if (user>=0 && user>=100){
+    console.log()
+}
+
+
+
 //
 //     - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //         за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
