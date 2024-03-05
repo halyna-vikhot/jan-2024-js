@@ -9,17 +9,17 @@
  // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
 
- // function circle(a, b) {
- //     return a*b;
+ // function circle(r) {
+ //     return 3.14*r**2;
  // }
- //    let x2 = circle(5,3.14);
+ //    let x2 = circle(3.14);
  //     console.log(x2);
 
  // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
- function cylinder(h, r) {
-    return h+r;
- }
- let x3 = cylinder(3, 9);
- console.log(x3);
+ // function cylinder(2π, h, r) {
+ //    return 2*3.14*r*h;
+ // }
+ // let x3 = cylinder(2π, 3, 9);
+ // console.log(x3);
 
  // - створити функцію яка приймає масив та виводить кожен його елемент
