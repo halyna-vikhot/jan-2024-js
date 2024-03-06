@@ -39,13 +39,15 @@
 //      {monday:'monday2', tuesday:'tuesday2', wednesday:'wednesday2'},
 //      {monday:'monday3', tuesday:'tuesday3', wednesday:'wednesday3'},
 //  ]
-//  for (const dayElement of day) {
-//      days(dayElement.monday, dayElement.tuesday, dayElement.wednesday)
+ // for (const dayElement of day) {
+ //     days(dayElement.monday, dayElement.tuesday, dayElement.wednesday)
 //  }
 
  // ---------------------------------------------------------------------------------------------------------------------
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
+ function text (<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, libero.</p>) {
 
+ }
  // ---------------------------------------------------------------------------------------------------------------------
 //  - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
