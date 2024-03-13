@@ -1,6 +1,8 @@
 // - Знайти та вивести довжину наступних стрінгових значень
 // 'hello world', 'lorem ipsum', 'javascript is cool'
-
+// let arrWords = ['hello world', 'lorem ipsum', 'javascript is cool'];
+// let Word = (arr)=>arr.forEach(item => console.log(item.length));
+// Word(arrWords);
 
 // - Перевести до великого регістру наступні стрінгові значення
 // 'hello world', 'lorem ipsum', 'javascript is cool'
@@ -38,25 +40,54 @@
 // ------------------------------  ----------------------------------------------------------------------------------
 //
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
+
+// let Numb = [10,8,-7,55,987,-1011,0,1050,0];
+// let newNumb = Numb.map(String);
+// console.log(newNumb);
+// ------------------------------  ----------------------------------------------------------------------------------
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки
 // в залежності від значення аргументу direction.
-//     let nums = [11,21,3];
+
+    // let nums = [11,21,3];
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
+
+// let sort = (arr, direction)=>
+//     console.log(arr.sort((a, b) =>
+//         direction === "descending" ? b - a : a - b));
+//
+// sort(nums, "ascending");
+// sort(nums, "descending");
 //
 // ==========================
 // - є масив
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
-// ];
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
 // -- відсортувати його за спаданням за monthDuration
+
+let arrSort = coursesAndDurationArray
+    .sort((a, b) =>
+        b.monthDuration - a.monthDuration);
+console.log(arrSort);
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
+
+let arrFilter = coursesAndDurationArray.filter(item => item.monthDuration > 5);
+console.log(arrFilter);
 // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+
+let arrMap = coursesAndDurationArray.map((item, index) => {
+    return {
+        id: index + 1,
+        ...item
+    }
+})
+console.log(arrMap);
 // =========================
 //     описати колоду карт (від 6 до туза без джокерів)
 // - знайти піковий туз
