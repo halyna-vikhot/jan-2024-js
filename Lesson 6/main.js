@@ -166,6 +166,7 @@ let cards = [
 //     hearts:[],
 //     clubs:[]
 // }
+<<<<<<< HEAD
 const cardsSuit = (cardS,previousValue) => {
     return cardS.reduce(( prev, card) => {
         if (card.cardSuit === previousValue) {
@@ -179,6 +180,21 @@ console.log(cardsSuit(cards, 'diamonds'))
 console.log(cardsSuit(cards, 'hearts'))
 console.log(cardsSuit(cards, 'spades'))
 console.log(cardsSuit(cards, 'clubs'))
+=======
+const arrCardsSuit = (arr, cardS) => {
+    return arr.reduce((previous, current) => {
+        if (current.cardSuit === cardS) {
+            return previous.push(current)
+        }
+    }, []);
+}
+
+console.log(arrCardsSuit(cards, 'spades'))
+console.log(arrCardsSuit('diamonds'))
+console.log(arrCardsSuit(cards, 'hearts'))
+console.log(arrCardsSuit(cards, 'clubs'))
+
+>>>>>>> origin/master
 // =========================
 //     взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 
