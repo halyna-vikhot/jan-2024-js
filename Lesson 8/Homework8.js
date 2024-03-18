@@ -86,18 +86,18 @@ function Car (model, manufacturer, year, maxSpeed, volume) {
     // //     console.log(`їдемо зі швидкістю ${maxSpeed} на годину`);
     // }
 
-}
+// }
 // ------------------------------------------------------------------
-this.info = ()=>{
-    console.log(`model - ${this.model}`);
-    console.log(`manufacturer - ${this.manufacturer}`);
-    console.log(`year - ${this.year}`);
-    console.log(`maxSpeed - ${this.maxSpeed}`);
-    console.log(`volume - ${this.volume}`);
-}
-
-this.increaseMaxSpeed = newSpeed => {
-    console.log(this.maxSpeed += newSpeed);
+// this.info = ()=>{
+//     console.log(`model - ${this.model}`);
+//     console.log(`manufacturer - ${this.manufacturer}`);
+//     console.log(`year - ${this.year}`);
+//     console.log(`maxSpeed - ${this.maxSpeed}`);
+//     console.log(`volume - ${this.volume}`);
+// }
+//
+// this.increaseMaxSpeed = newSpeed => {
+//     console.log(this.maxSpeed += newSpeed);
 
 }
 //
