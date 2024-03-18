@@ -81,25 +81,49 @@ function Car (model, manufacturer, year, maxSpeed, volume) {
     this.maxSpeed = maxSpeed;
     this.volume = volume;
     this.driver = [];
+    this.increaseMaxSpeed = increaseMaxSpeed;
 
-    // this.drive = () => {
-    // //     console.log(`їдемо зі швидкістю ${maxSpeed} на годину`);
-    // }
+    this.drive = () => {
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+    }
 
-// }
-// ------------------------------------------------------------------
-// this.info = ()=>{
-//     console.log(`model - ${this.model}`);
-//     console.log(`manufacturer - ${this.manufacturer}`);
-//     console.log(`year - ${this.year}`);
-//     console.log(`maxSpeed - ${this.maxSpeed}`);
-//     console.log(`volume - ${this.volume}`);
-// }
-//
-// this.increaseMaxSpeed = newSpeed => {
-//     console.log(this.maxSpeed += newSpeed);
-
+    this.info = () => {
+        console.log(`model - ${this.model}`);
+        console.log(`manufacturer - ${this.manufacturer}`);
+        console.log(`year - ${this.year}`);
+        console.log(`maxSpeed - ${this.maxSpeed}`);
+        console.log(`volume - ${this.volume}`);
+    }
 }
+
+  this.increaseMaxSpeed = newSpeed => {
+    console.log(this.maxSpeed += newSpeed);
+
+    this.changeYear = newValue => {
+        console.log(this.year = newValue);
+    }
+
+    this.addDriver = function (name, surname) {
+        this.driver.push(new Driver(name, surname));
+
+    }
+}
+
+function Driver(name, surname) {
+    this.name = name;
+    this.age = surname;
+}
+
+let car = new Car('Audi', "vasya", 2023, 200, 3.2);
+console.log(car);
+car.drive()
+car.info()
+car.increaseMaxSpeed(120)
+car.changeYear(2013);
+car.addDriver('vasya', 33)
+console.log(car);
+    
+
 //
 // - (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
