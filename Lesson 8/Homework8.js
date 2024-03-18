@@ -65,13 +65,41 @@ const sortClients = (arr) => {
 console.log(sortClients(Clients));
 // --------------------------------------------------------------------------------------------------------------------
 
-// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями
+// модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна.
+// додати в об'єкт функції:
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
 // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 //
+function Car (model, manufacturer, year, maxSpeed, volume) {
+    this.model = model;
+    this.manufacturer = manufacturer;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.volume = volume;
+    this.driver = [];
+
+    // this.drive = () => {
+    // //     console.log(`їдемо зі швидкістю ${maxSpeed} на годину`);
+    // }
+
+}
+// ------------------------------------------------------------------
+this.info = ()=>{
+    console.log(`model - ${this.model}`);
+    console.log(`manufacturer - ${this.manufacturer}`);
+    console.log(`year - ${this.year}`);
+    console.log(`maxSpeed - ${this.maxSpeed}`);
+    console.log(`volume - ${this.volume}`);
+}
+
+this.increaseMaxSpeed = newSpeed => {
+    console.log(this.maxSpeed += newSpeed);
+
+}
 //
 // - (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
@@ -80,7 +108,19 @@ console.log(sortClients(Clients));
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-//
+
+// class Cars {
+//     constructor(model, manufacturer, year, maxSpeed, volume) {
+//         this.model = model;
+//         this.manufacturer = manufacturer;
+//         this.year = year;
+//         this.maxSpeed = maxSpeed;
+//         this.volume = volume;
+//         this.driver = [];
+//     }
+// }
+// driver ()
+
 //
 //
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
