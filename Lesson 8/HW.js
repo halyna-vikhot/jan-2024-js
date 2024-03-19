@@ -129,52 +129,52 @@ console.log(sortClients(Clients));
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
-// class Cars {
-//     constructor(model, manufacturer, year, maxSpeed, volume) {
-//         this.model = model;
-//         this.manufacturer = manufacturer;
-//         this.year = year;
-//         this.maxSpeed = maxSpeed;
-//         this.volume = volume;
-//         this.driver = [];
-//     }
+class Cars {
+    constructor(model, manufacturer, year, maxSpeed, volume) {
+        this.model = model;
+        this.manufacturer = manufacturer;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.volume = volume;
+        this.driver = [];
+    }
+
+    drive() {
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
+    }
+
 //
-//     drive() {
-//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
-//     }
+    info() {
+        console.log(`model - ${this.model}`);
+        console.log(`manufacturer - ${this.manufacturer}`);
+        console.log(`year - ${this.year}`);
+        console.log(`maxSpeed - ${this.maxSpeed}`);
+        console.log(`volume- ${this.volume}`);
+    }
+
 //
-// //
-//     info() {
-//         console.log(`model - ${this.model}`);
-//         console.log(`manufacturer - ${this.manufacturer}`);
-//         console.log(`year - ${this.year}`);
-//         console.log(`maxSpeed - ${this.maxSpeed}`);
-//         console.log(`volume- ${this.volume}`);
-//     }
+    increaseMaxSpeed(newSpeed) {
+        console.log(this.maxSpeed += newSpeed);
+    }
+
 //
-// //
-//     increaseMaxSpeed(newSpeed) {
-//         console.log(this.maxSpeed += newSpeed);
-//     }
+    changeYear(newValue) {
+        console.log(this.year = newValue);
+    }
+
 //
-// //
-//     changeYear(newValue) {
-//         console.log(this.year = newValue);
-//     }
-//
-// //
-//     addDriver(name, surname) {
-//         this.driver.push(new Driver (name, surname))
-//     }
-// }
-// let Car = new Cars ('BMW', "bmw", 2023, 300, 3.2);
-// console.log(Car)
-// Car.drive()
-// Car.info()
-// Car.increaseMaxSpeed(300)
-// Car.changeYear(2012)
-// Car.addDriver('vasya', 'vasilov')
-// console.log(Car)
+    addDriver(name, surname) {
+        this.driver.push (name, surname)
+    }
+}
+let Car = new Cars ('BMW', "bmw", 2023, 300, 3.2);
+console.log(Car)
+Car.drive()
+Car.info()
+Car.increaseMaxSpeed(300)
+Car.changeYear(2012)
+Car.addDriver('vasya', 'vasilov')
+console.log(Car)
 
 // --------------------------------------------------------------------------------------------------------------------
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
