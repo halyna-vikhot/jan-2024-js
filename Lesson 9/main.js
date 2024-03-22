@@ -71,14 +71,14 @@
 // =====================================================================================================================
 //
 //     - Є масив
-let coursesAndDurationArray = [
-    {title: 'JavaScript Complex', monthDuration: 5},
-    {title: 'Java Complex', monthDuration: 6},
-    {title: 'Python Complex', monthDuration: 6},
-    {title: 'QA Complex', monthDuration: 4},
-    {title: 'FullStack', monthDuration: 7},
-    {title: 'Frontend', monthDuration: 4}
-];
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
 
 // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>
 // з title  елементу, та <p class='description'> з monthDuration елементу.
@@ -243,9 +243,9 @@ let coursesArray = [
 // властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 for (const coursesArrayElement of coursesArray) {
-    const courseArray = document.createElement('div');
-    const courseInfo = document.createElement('div');
-    const courseModules = document.createElement('div');
+    const cours = document.createElement('div');
+    const coursInfo = document.createElement('div');
+    const coursModules = document.createElement('div');
     const title = document.createElement('h2');
     const monthDuration = document.createElement('span');
     const hourDuration = document.createElement('span');
@@ -255,9 +255,9 @@ for (const coursesArrayElement of coursesArray) {
     monthDuration.innerText = coursesArrayElement.monthDuration;
     hourDuration.innerText = coursesArrayElement.hourDuration;
 
-    courseArray.append(courseInfo, courseModules);
-    courseInfo.append(title, monthDuration, hourDuration);
-    courseModules.appendChild(modules);
+    cours.append(coursInfo, coursModules);
+    coursInfo.append(title, monthDuration, hourDuration);
+    coursModules.appendChild(modules);
 
     for (const module of coursesArrayElement.modules) {
         const moduleElement = document.createElement('li');
@@ -265,6 +265,6 @@ for (const coursesArrayElement of coursesArray) {
         moduleElement.innerText = module;
     }
 
-    document.appendChild(courseArray);
+    document.body.appendChild(cours);
 
 }
