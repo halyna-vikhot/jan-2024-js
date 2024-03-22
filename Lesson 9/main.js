@@ -243,9 +243,9 @@ let coursesArray = [
 // властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 for (const coursesArrayElement of coursesArray) {
-    const cours = document.createElement('div');
-    const coursInfo = document.createElement('div');
-    const coursModules = document.createElement('div');
+    const course = document.createElement('div');
+    const courseInfo = document.createElement('div');
+    const courseModules = document.createElement('div');
     const title = document.createElement('h2');
     const monthDuration = document.createElement('span');
     const hourDuration = document.createElement('span');
@@ -255,9 +255,9 @@ for (const coursesArrayElement of coursesArray) {
     monthDuration.innerText = coursesArrayElement.monthDuration;
     hourDuration.innerText = coursesArrayElement.hourDuration;
 
-    cours.append(coursInfo, coursModules);
-    coursInfo.append(title, monthDuration, hourDuration);
-    coursModules.appendChild(modules);
+    course.append(courseInfo, courseModules);
+    courseInfo.append(title, monthDuration, hourDuration);
+    courseModules.appendChild(modules);
 
     for (const module of coursesArrayElement.modules) {
         const moduleElement = document.createElement('li');
@@ -265,6 +265,6 @@ for (const coursesArrayElement of coursesArray) {
         moduleElement.innerText = module;
     }
 
-    document.body.appendChild(cours);
+    document.body.appendChild(course);
 
 }
