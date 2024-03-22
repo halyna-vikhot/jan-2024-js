@@ -51,25 +51,27 @@ let coursesAndDurationArray = [
 
 // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
 // Завдання робити через цикли.
-const coursesAndDurationArrayElement = document.getElementsByClassName('coursesAndDurationArray')[5];
+const body = document.body;
+const block = document.createElement('div');
 
-for (const coursesAndDurationArrayElement of coursesAndDurationArray) {
-    let div = document.createElement('div');
-    div.classList.add('coursesAndDurationArrayElement');
+block.style.background = 'green';
 
-    coursesAndDurationArrayElement.append(div)
+block.innerHTML = `<h2>${coursesAndDurationArray[0].title}</h2><p>${coursesAndDurationArray[0].monthDuration}</p>`;
 
-    let title = document.createElement('title');
-    title.innerText = 'title-${title}, monthDuration - ${monthDuration}';
-    div.appendChild(title);
+const block2 = block.cloneNode(true);
+block2.innerHTML = `<h2>${coursesAndDurationArray[1].title}</h2> <p>${coursesAndDurationArray[1].monthDuration}</p>`;
+const block3 = block.cloneNode(true);
+block2.innerHTML = `<h2>${coursesAndDurationArray[2].title}</h2> <p>${coursesAndDurationArray[2].monthDuration}</p>`;
+const block4 = block.cloneNode(true);
+block2.innerHTML = `<h2>${coursesAndDurationArray[3].title}</h2> <p>${coursesAndDurationArray[3].monthDuration}</p>`;
+const block5 = block.cloneNode(true);
+block2.innerHTML = `<h2>${coursesAndDurationArray[4].title}</h2> <p>${coursesAndDurationArray[4].monthDuration}</p>`;
+const block6 = block.cloneNode(true);
+block2.innerHTML = `<h2>${coursesAndDurationArray[5].title}</h2> <p>${coursesAndDurationArray[6].monthDuration}</p>`;
+const block7 = block.cloneNode(true);
+block2.innerHTML = `<h2>${coursesAndDurationArray[6].title}</h2> <p>${coursesAndDurationArray[6].monthDuration}</p>`;
 
-
-    let title1 = document.createElement('title1');
-    title1.innerText = 'title1-${title}, monthDuration1 - ${monthDuration}';
-    div.appendChild(title1);
-}
-
-
+body.append(block, block2, block3, block4, block5, block6);
 //
 
 //
