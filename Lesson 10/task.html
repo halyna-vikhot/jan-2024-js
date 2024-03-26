@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається інформація
+    // про дату та час відвідування сторінки. Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно
+    // відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль,
+    // а побудувати дом структуру під кожну сессію
+    // const list = localStorage.getItem('sessions');
+    //     console.log(list);
+    //     const sessions = list ? JSON.parse(list): []
+    //         sessions.push(DateTime());
+    //     localStorage.setItem('sessions', JSON.stringify(sessions));
+    //
+    //     for (const session of sessions) {
+    //         let page = document.createElement('div')
+    //         let date = document.createElement('div')
+    //         let day = document.createElement('div')
+    //         let hour = document.createElement('div')
+    //         let minute = document.createElement('div')
+    //
+    //         date.innerText = `Date: ${session.data}`;
+    //         day.innerText = `Day: ${session.day}`;
+    //         hour.innerText = `Hour: ${session.hour}`;
+    //         minute.innerText = `Minute: ${session.minute}`
+    //
+    //         list.append(date, day, hour, minute)
+    //         document.body.appendChild(page)
+    //     }
+    //
+    //     function DateTime(){
+    //         let dates = new Date();
+    //         let day = dates.getDate();
+    //         let hour = dates.getHours();
+    //         let minute = dates.getMinutes();
+    //
+    //     }
+    // =========================
+    //     зробити масив на 100 об'єктів та дві кнопки prev next
+    // при завантажені сторінки з'являються перші 10 об'єктів.
+    //     При натисканні next виводяться настпні 10 об'єктів
+    // При натисканні prev виводяться попередні 10 об'єктів
+    //
+    //
+    // - Створити довільний елемент з id = text та створити кнопку.
+    // Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
+
+    // const text = document.getElementById('text');
+    // const asd = document.getElementById('btn');
+    // asd.addEventListener("click", function (e){
+    //     e.preventDefault();
+    //     if(text.style.display === 'none'){
+    //         text.style.display = 'block ';
+    //     }else {
+    //         text.style.display = 'none';
+    //     }
+    // })
+    //
+    //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.
+    //     При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18,
+    //     та повідомити про це користувача
+    // const asd = document.getElementById('asd');
+    // const input = document.getElementById('age');
+    // const page = document.createElement('div')
+    // asd.addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     if (input.value >= 18) {
+    //         page.innerText = '<Більше 18 років'
+    //         page.style.color = 'black';
+    //     } else {
+    //         page.innerText = 'Менше 18'
+    //         page.style.color = 'white';
+    //     }
+    //     document.body.appendChild(page)
+    // })
+
+    //
+    // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+    //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+    // (Додатковачастина для завдання)
+
+
+    //
+    // *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з довільним блоком,
+    // в середині якого є значення "100грн"
+    // при перезавантаженні сторінки до значаення додається по 10грн, але !!!
+    //     зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
+    //     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд - нічого не відбувається
+    const asd = new Date().getTime()
+    const money = document.getElementById('money');
+    const price = localStorage.getItem('money');
+    const time = localStorage.getItem('money');
+
+    if(!time|| asd - time >= 3000){
+        const number = price ?price.split('').map(Number).filter(item=> item ||item ===0).join(''):price;
+        const newLocalValue = number?+number +10 +'грн': '100грн';
+        money.innerText = newLocalValue;
+        localStorage.setItem('money', newLocalValue);
+        localStorage.setItem('time', asd.toString());
+
+    }
+
+
+</script>
+</body>
+</html>
