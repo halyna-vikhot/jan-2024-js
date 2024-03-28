@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="carts"></div>
+<script>
+    function allCarts() {
+        let url = new URL ('https://dummyjson.com/docs/carts')
+
+        fetch(url)
+            .then(res=> res.json())
+            .then(value => {
+                console.log(value)
+                const divCarts = document.getElementById('cards');
+                for (const divCart of divCarts) {
+                    let {products} = divCart;
+                    const Div = document.createElement('div');
+                    divCarts.appendChild(Div);
+                    for (const product of products) {
+
+                        const title = document.createElement('h2');
+                        const price = document.createElement('div');
+                        const quantity = document.createElement('div');
+                        const total = document.createElement('div');
+                        const discountedPrice = document.createElement('div');
+                        const img = document.createElement('img');
+
+
+                    title.innerText = products.title;
+                    price.innerText = `price: ${product.price}`;
+                    quantity.innerText = `quantity: ${product.quantity}`;
+                    total.innerText = `total: ${product.total}`;
+                    discountedPrice.innerText = `discountPrice: ${product.discountedPrice}`;
+                    discountPercentage.innerText = `discountPercentage: ${product.discountPercentage}`
+                    img.src = product.thumbnail
+                    }
+                }
+            })
+    }
+allCarts()
+
+
+</script>
+</body>
+</html>
