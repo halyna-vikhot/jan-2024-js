@@ -1,7 +1,7 @@
 // - взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти. Інгредієнти повинні бути список
 // //     під час відображення.
 function allRecipes(){
-    let url = new URL('https://dummyjson.com/docs/recipes')
+    let url = new URL('https://dummyjson.com/recipes')
     fetch(url)
         .then(res => res.json())
         .then(json =>{
