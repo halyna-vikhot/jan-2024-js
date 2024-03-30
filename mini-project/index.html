@@ -7,7 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+// В index.html
+// 1 отримати масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users
+// 2 Вивести id,name всіх user в index.html. Окремий блок для кожного user.
+// 3 Додати кожному блоку кнопку/посилання , при кліку на яку відбувається перехід  на сторінку user-details.html,
+//     котра має детальну інфорацію про об'єкт на який клікнули
+
 <body>
-<script src="main.js"></script>
+
+<div id = "user-info"> </div>
+
+<script>
+
+    const URL = ('https://jsonplaceholder.typicode.com/users')
+
+    function getUsers(url) {
+        const userInfo = document.getElementById('user-info')
+        fetch(url)
+            .then((response) => response.json())
+            .then((users) => {
+                console.log(users)
+                for (const user of users) {
+                    const user = document.createElement('div');
+                    const name = document.createElement('h2');
+                    const id = document.createElement('span');
+                    const button = document.createElement('b');
+                    user.UserInfo.add('user');
+
+                    name.innerText = `Name: ${user.name}`;
+                    id.innerText = `Id: ${user.id}`;
+                    button.innerText = 'GET';
+                    button.href = `user-details.html?id${user.id}`
+
+                    user.append(name, id, button)
+                    userInfo.appendChild(user)
+
+        }
+
+    });
+    }
+getUsers(URL)
+
+</script>
+
 </body>
 </html>
