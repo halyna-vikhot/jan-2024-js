@@ -27,17 +27,17 @@
             .then((response) => response.json())
             .then((users) => {
                 console.log(users)
-                for (const user of users) {
+                for (const datum of users) {
                     const user = document.createElement('div');
                     const name = document.createElement('h2');
                     const id = document.createElement('span');
-                    const button = document.createElement('b');
+                    const button = document.createElement('a');
                     user.classList.add('user');
 
-                    name.innerText = `Name: ${user.name}`;
-                    id.innerText = `Id: ${user.id}`;
-                    button.innerText = 'GET';
-                    button.href = `user-details.html?id${user.id}`
+                    name.innerText = `Name: ${datum.name}`;
+                    id.innerText = `Id: ${datum.id}`;
+                    button.innerText = "GET";
+                    button.href = `user-details.html?id${datum.id}`
 
                     user.append(name, id, button)
                     userInfo.appendChild(user)
