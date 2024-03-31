@@ -1,0 +1,121 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column  ;
+
+
+}
+
+.user-lists {
+    padding-top: 30px;
+    display: grid;
+    width: 90vw;
+}
+
+.user {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.user p{
+    font-size: 20px;
+    color: midnightblue;
+
+}
+.user a{
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 20px;
+    color: white;
+    background: black;
+    text-align: center;
+    border: none;
+
+}
+
+.obj-user{
+    width: 50vw;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+.obj-user h2{
+    padding-bottom: 20px;
+
+}
+
+.button-post{
+    width: 90vw;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+    background: black;
+    text-align: center;
+    border: none;
+}
+#posts{
+    display: none;
+    width: 90vw;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    margin: 30px 0;
+}
+
+#obj-post{
+    width: 50vw;
+    font-size: 20px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 30px;
+
+}
+
+#obj-post h2{
+    padding-bottom: 10px;
+}
+
+#obj-post h3{
+    padding-bottom: 10px;
+    text-transform: capitalize;
+
+}
+#obj-post div{
+    padding: 10px 0;
+    color: grey;
+
+}
+
+#comments{
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin: 50px 0;
+}
+.title-comm{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+.comment{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
