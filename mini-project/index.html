@@ -7,12 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-// В index.html
-// 1 отримати масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users
-// 2 Вивести id,name всіх user в index.html. Окремий блок для кожного user.
-// 3 Додати кожному блоку кнопку/посилання , при кліку на яку відбувається перехід  на сторінку user-details.html,
-//     котра має детальну інфорацію про об'єкт на який клікнули
-
 <body>
 
 <div id = "user-info"> </div>
@@ -27,17 +21,17 @@
             .then((response) => response.json())
             .then((users) => {
                 console.log(users)
-                for (const datum of users) {
+                for (const date of users) {
                     const user = document.createElement('div');
                     const name = document.createElement('h2');
                     const id = document.createElement('span');
                     const button = document.createElement('a');
                     user.classList.add('user');
 
-                    name.innerText = `Name: ${datum.name}`;
-                    id.innerText = `Id: ${datum.id}`;
+                    name.innerText = `Name: ${date.name}`;
+                    id.innerText = `Id: ${date.id}`;
                     button.innerText = "GET";
-                    button.href = `user-details.html?id${datum.id}`
+                    button.href = `user-details.html?id${date.id}`
 
                     user.append(name, id, button)
                     userInfo.appendChild(user)
