@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<div id = "object-post"></div>
+<div id = "index-posts"></div>
 
 <h2 class="title">Comments</h2>
 <div id ="comments" ></div>
@@ -18,7 +18,7 @@
 function userPosts() {
     const queryParams = new URLSearchParams(window.location.search);
     const postId = queryParams.get('id');
-    const objectPost = document.getElementById('obj-post');
+    const objectPost = document.getElementById('index-post');
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
         .then(res=> res.json())
         .then(post=>{
