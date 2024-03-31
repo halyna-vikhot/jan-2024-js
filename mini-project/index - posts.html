@@ -14,15 +14,16 @@
 <div id ="comments" ></div>
 
 <script>
+
 function userPosts() {
-    let url = new URL(location.href);
-    let postId = url.searchParams.get('postId');
-    const objectPost = document.getElementById('object-post');
-    fetch('https://jsonplaceholder.typicode.com/posts/${postId}')
-        .then(res => res.json())
-        .then(post => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const postId = queryParams.get('id');
+    const objectPost = document.getElementById('obj-post');
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+        .then(res=> res.json())
+        .then(post=>{
             const title = document.createElement('h2');
-            const name = document.createElement('h4');
+            const name = document.createElement('h3');
             const body = document.createElement('p');
             const id = document.createElement('div');
 
@@ -40,12 +41,12 @@ userPosts()
 function getComments() {
     const queryParams = new URLSearchParams(window.location.search);
     const postId = queryParams.get('id');
-    const commentsDiv = document.getElementById('comments');
+    const comDiv = document.getElementById('comments');
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
         .then(res => res.json())
         .then(value => {
             for (const valueElement of value) {
-                const comDiv = document.createElement('div');
+                const commentsDiv = document.createElement('div');
                 const name = document.createElement('h4');
                 const id = document.createElement('div');
                 const body = document.createElement('p');
@@ -60,7 +61,7 @@ function getComments() {
 
 
                 comDiv.append(name, email, id, body)
-                comDiv.appendChild(comDiv);
+                comDiv.appendChild(commentsDiv);
             }
         });
 
